@@ -3,25 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romantic Webpage for Trisha</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Romantic Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .hearts {
+            position: fixed;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Trisha's Romantic Page</h1>
-    </header>
-    <main>
-        <section>
-            <h2>A Love Story</h2>
-            <p>Once upon a time, in a magical land, there lived a beautiful princess named Trisha...</p>
-        </section>
-        <section>
-            <h2>Your Heart's Desire</h2>
-            <p>Every moment spent with you is like a beautiful dream come true.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Trisha's Romantic Page</p>
-    </footer>
+    <div class="hearts">
+        ❤️❤️❤️❤️❤️
+    </div>
+    <h1>Welcome to Our Romantic Page</h1>
+    <p>Here are some romantic messages:</p>
+    <section>
+        <h2>In English:</h2>
+        <p>Love is not about how many days, months or years you have been together. Love is about how much you love each other every single day.</p>
+    </section>
+    <section>
+        <h2>In Hindi:</h2>
+        <p>प्यार यह नहीं है कि आप कितने दिनों, महीनों या सालों से एक साथ हैं। प्यार यह है कि आप हर एक दिन एक-दूसरे से कितना प्यार करते हैं।</p>
+    </section>
+    <button onclick="showPopup()">Click Me for a Surprise!</button>
+    <div id="popup" style="display:none;">
+        <p>This is a pop-up message!</p>
+        <button onclick="hidePopup()">Close</button>
+    </div>
+    <audio controls>
+        <source src="romantic-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
